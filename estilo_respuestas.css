@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    margin: 20px 0;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .resultado {
+    margin: 20px 0;
+  }
+  
+  .resultado p {
+    font-weight: bold;
+  }
+  
+  .resultado .correcta {
+    color: green;
+  }
+  
+  .resultado .incorrecta {
+    color: red;
+  }
+  
+  .puntaje {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .puntaje p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .puntaje .bueno {
+    color: green;
+  }
+  
+  .puntaje .regular {
+    color: orange;
+  }
+  
+  .puntaje .malo {
+    color: red;
+  }
+  
