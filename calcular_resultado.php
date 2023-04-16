@@ -5,8 +5,13 @@
     <link rel="stylesheet" href="estilo_respuestas.css">
   </head>
   <body>
+    <img src="logo.png" alt="Integratic" width="250" height="100">
     <h1>Resultado del Examen de Componentes del Computador</h1>
     <?php
+
+      // Llamar a el archivo conexion.php para hacer la conexión a la base de datos
+      include("conexion.php");
+
       // Obtener respuestas del formulario
       $respuesta1 = $_POST['pregunta1'];
       $respuesta2 = $_POST['pregunta2'];
@@ -43,6 +48,33 @@
       // Mostrar puntaje
       echo '<h2>Puntaje:</h2>';
       echo '<p>Obtuviste ' . $puntaje . ' de 3 puntos posibles.</p>';
+
+
+// Base de datos
+$cedula = "123";
+$nombre = "Mario";
+$apellido = "Fernando";
+$pregunta_1 = $resultado1;
+$pregunta_2 = $resultado2;
+$pregunta_3 = $resultado3;
+$Total = $puntaje;
+$nom_certificado ="Componentes de un computador";
+
+// Insertar datos en la tabla de usuarios
+$sql = "INSERT INTO historial (cedula, nombre, apellido, pregunta_1, pregunta_2, pregunta_3, puntaje, nom_certificado) VALUES ('$cedula','$nombre','$apellido','$pregunta_1','$pregunta_2','$pregunta_3','$Total','$nom_certificado')";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Registro exitoso";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+// Cerrar conexión
+mysqli_close($conn);
+
+
+
+
     ?>
   </body>
 </html>
