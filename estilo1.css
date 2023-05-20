@@ -5,6 +5,16 @@ body {
     padding: 0;
   }
   
+  
+  #cronometro{
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #cc1d1d;
+
+  }
+
+
+
   h1 {
     color: #333333;
     text-align: center;
@@ -47,3 +57,5 @@ body {
     background-color: #006699;
   }
   
+  
+ 

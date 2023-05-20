@@ -5,16 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integratic Certificados</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo1.css">
+
+  <script src="cronometro.js"></script>
+  <script>
+      window.onload = function () {
+          // Para 30 min
+          //var thirtyMinutes = 60 * 30,
+
+          // Para 3 min
+          var thirtyMinutes = 60 * 3,
+
+              display = document.querySelector('#cronometro');
+          startTimer(thirtyMinutes, display);
+      };
+  </script>
     
 </head>
 <body>
     <img src="logo.png" alt="Integratic" width="250" height="100">
-    <h1>Examen de Componentes del Computador</h1>
-    <form action="calcular_resultado.php" method="post">
-        
-        
 
+    <h1>Examen de Componentes del Computador</h1>
+<!-- 
+    <div class="div_cronometro" id="cronometro">03:00</div>
+-->
+    
+
+
+    <form action="calcular_resultado1.php" method="post">
+      <div  id="cronometro">03:00</div>
+      <label for="cedula">Cédula:</label>
+      <input class="input_cedula" type="text" id="cedula" name="cedula" >
+      <label for="nombre">Nombre:</label>
+      <input class="input_nombre" type="text" id="nombre" name="nombre" >
+      <label for="apellido">Apellido:</label>
+      <input class="input_apellido" type="text" id="apellido" name="apellido" >
+        
       <h2>Pregunta 1</h2>
       <p>¿Qué es la CPU?</p>
       <input type="radio" name="pregunta1" value="a">a) La unidad de procesamiento central</input><br>
@@ -32,8 +58,22 @@
       <input type="radio" name="pregunta3" value="a">a) La placa principal que conecta todos los componentes del computador</input><br>
       <input type="radio" name="pregunta3" value="b">b) La unidad de procesamiento central</input><br>
       <input type="radio" name="pregunta3" value="c">c) La unidad de almacenamiento central</input><br>
+
+      <h2>Pregunta 4</h2>
+      <p>¿Cuál es la función de la tarjeta de video en un computador?</p>
+      <input type="radio" name="pregunta4" value="a">a) Almacenar datos y programas de manera temporal</input><br>
+      <input type="radio" name="pregunta4" value="b">b) Procesar y generar imágenes para ser mostradas en el monitor</input><br>
+      <input type="radio" name="pregunta4" value="c">c) Controlar la comunicación entre el procesador y los periféricos</input><br>
+
+      <h2>Pregunta 5</h2>
+      <p>¿Qué es un puerto USB?</p>
+      <input type="radio" name="pregunta5" value="a">a) Una memoria de almacenamiento permanente en el computador</input><br>
+      <input type="radio" name="pregunta5" value="b">b) Una tarjeta de expansión utilizada para mejorar el rendimiento gráfico</input><br>
+      <input type="radio" name="pregunta5" value="c">c) Un tipo de conexión utilizada para conectar periféricos al computador</input><br>
+
       
-      <input type="submit" value="Enviar respuestas">
+      
+      <input type="submit" id="submitButton" value="Enviar respuestas">
     </form>
 </body>
 </html>
